@@ -2,11 +2,15 @@ import { Heart, User } from "lucide-react";
 import Link from "next/link";
 import { ModeToggle } from "./toggle-theme";
 
-const Navbar = () => {
+export function Navbar() {
   return (
-    <header className="fixed top-0 z-50 w-full bg-white/60 shadow shadow-gray-200">
-      <nav className="flex items-center justify-between h-16 p-4 backdrop-blur">
-        <h1 className="text-2xl">Eco<span className="font-bold">Shop</span></h1>
+    <header className="fixed top-0 left-0 right-0 bottom-0 h-20 z-50 w-full bg-background/80 backdrop-blur border-b-[1px]">
+      <nav className="flex items-center justify-between w-full h-full px-4 max-w-6xl mx-auto">
+        <Link href="/">
+          <h1 className="text-2xl font-bold">
+            Eco<span className="text-pink-500">Shop</span>
+          </h1>
+        </Link>
 
         <div className="flex gap-2 items-center justify-center">
           <Link href="/login">
@@ -14,15 +18,12 @@ const Navbar = () => {
           </Link>
 
           <Link href="/login" className="pr-2 border-r-[1px] border-gray-300">
-            <Heart strokeWidth={2} />
+            <Heart color="#ec4899" strokeWidth={2} />
           </Link>
 
           <ModeToggle />
-          
         </div>
       </nav>
     </header>
   );
 };
-
-export default Navbar;
