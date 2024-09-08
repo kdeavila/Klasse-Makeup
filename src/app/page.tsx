@@ -1,7 +1,6 @@
 import { CardDemo } from "@/components/card-product";
 import { CarouselProducts } from "@/components/carousel";
 import { Button } from "@/components/ui/button";
-import { Card, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 
 export default function Home() {

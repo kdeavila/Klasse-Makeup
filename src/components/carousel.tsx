@@ -9,6 +9,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Link from "next/link";
+import Image from "next/image";
 
 const images = [
   { id: 1, src: "/imagen1.jpg" },
@@ -33,12 +34,15 @@ export function CarouselProducts() {
     >
       <CarouselContent>
         {images.map((image) => (
-          <CarouselItem key={image.id} className="sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+          <CarouselItem
+            key={image.id}
+            className="sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
+          >
             <div className="p-1">
               <Card className="overflow-hidden h-[435px]">
                 <CardContent className="w-full h-full">
                   <Link href={`/products/${image.id}`}>
-                    <img
+                    <Image
                       src={image.src}
                       alt="image"
                       className="w-full h-full object-cover pointer-events-none"
