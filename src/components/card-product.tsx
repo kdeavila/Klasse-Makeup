@@ -13,8 +13,8 @@ type CardProps = React.ComponentProps<typeof Card>;
 export function CardDemo({ className, ...props }: CardProps) {
   return (
     <Card className={cn(className)} {...props}>
-      <CardHeader>
-        <CardTitle>Notifications</CardTitle>
+      <CardHeader className="text-left">
+        <CardTitle className="text-xl text-pink-500">Notifications</CardTitle>
         <CardDescription>You have 3 unread messages.</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">

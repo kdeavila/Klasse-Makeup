@@ -5,18 +5,14 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="mt-20 text-center">
-      <section className="flex flex-col items-center p-4 mb-8">
+    <main className="mt-20 w-full max-w-6xl mx-auto text-center">
+      <section className="flex flex-col items-center mb-8">
         <h1 className="text-3xl font-semibold">Productos estrellas</h1>
         <p className="text-lg text-balance text-muted-foreground text-center mb-4">
           Algunos de nuestros productos mas vendidos para ti:
         </p>
 
-        <div className="w-full">
-          <div className="w-full px-10 flex justify-center items-center">
-            <CarouselProducts />
-          </div>
-        </div>
+        <CarouselProducts />
       </section>
 
       <section className="flex flex-col items-center justify-center max-w-5xl mx-auto px-10">
