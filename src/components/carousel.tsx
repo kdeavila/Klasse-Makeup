@@ -12,22 +12,12 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
+import arrayProducts from "@/data/products";
+import { hashId } from "@/utils/hash";
 
-const images = [
-  { id: 1, src: "/imagen1.jpg" },
-  { id: 2, src: "/imagen2.jpg" },
-  { id: 3, src: "/imagen3.jpg" },
-  { id: 4, src: "/imagen4.jpg" },
-  { id: 5, src: "/imagen5.jpg" },
-  { id: 6, src: "/imagen6.jpg" },
-  { id: 7, src: "/imagen7.jpg" },
-  { id: 8, src: "/imagen8.jpg" },
-  { id: 9, src: "/imagen9.jpg" },
-];
-
-images.map((image) => {
-  console.log(image.src);
-});
+const favoriteProducts = arrayProducts
+  .filter((product) => product.favorite)
+  .slice(0, 6);
 
 export function CarouselProducts() {
   return (
@@ -46,19 +36,20 @@ export function CarouselProducts() {
           className="w-full max-w-6xl"
         >
           <CarouselContent>
-            {images.map((image) => (
+            {favoriteProducts.map((product) => (
               <CarouselItem
-                key={image.id}
+                key={product.id}
                 className="sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
               >
-                <Card className="overflow-hidden h-[435px]">
-                  <CardContent className="w-full h-full">
-                    <Link href={`/products/${image.id}`}>
+                <Card className="overflow-hidden h-96">
+                  <CardContent className="w-full h-full group">
+                    <Link href={`/products/${hashId(product.id)}`}>
                       <Image
+                        loading="lazy"
                         width={350}
                         height={450}
-                        src={image.src}
-                        alt="image"
+                        src={product.image}
+                        alt={product.name}
                         className="w-full h-full object-cover pointer-events-none"
                       />
                     </Link>

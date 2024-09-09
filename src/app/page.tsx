@@ -1,37 +1,27 @@
-import { CardDemo } from "@/components/card-product";
 import { CarouselProducts } from "@/components/carousel";
+import Products from "@/components/products";
+import SectionHeader from "@/components/section-header";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="mt-20 w-full max-w-6xl mx-auto text-center">
-      <section className="flex flex-col items-center mb-8">
-        <h1 className="text-3xl font-semibold">Productos estrellas</h1>
-        <p className="text-lg text-balance text-muted-foreground text-center mb-4">
-          Algunos de nuestros productos mas vendidos para ti:
-        </p>
-
+    <main className="mt-24 w-full max-w-6xl mx-auto text-center">
+      <section className="flex flex-col items-center mb-8 px-8 xl:px-0">
+        <SectionHeader
+          title="Productos estrellas"
+          description="Algunos de nuestros productos más vendidos:"
+        />
         <CarouselProducts />
       </section>
-
-      <section className="flex flex-col items-center justify-center max-w-5xl mx-auto px-10">
-        <h1 className="text-3xl font-semibold">Nuestros productos</h1>
-        <p className="text-lg text-balance text-muted-foreground text-center mb-4">
-          La mejor elección de productos para tu makeup:
-        </p>
-        
-        <article className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-4">
-          <CardDemo className="w-full" />
-          <CardDemo className="w-full" />
-          <CardDemo className="w-full" />
-        </article>
-
-        <Link href="/read-more">
-          <Button className="block mx-auto" variant="default">
-            Leer mas
-          </Button>
-        </Link>
+      <Separator className="mb-8" />
+      <section className="flex flex-col items-center justify-center max-w-6xl mx-auto px-8 xl:px-0 ">
+        <SectionHeader
+          title="Nuestros productos"
+          description="La mejor elección de productos para tu makeup:"
+        />
+        <Products />
       </section>
     </main>
   );
