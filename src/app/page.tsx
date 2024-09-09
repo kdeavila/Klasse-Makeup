@@ -1,9 +1,7 @@
 import { CarouselProducts } from "@/components/carousel";
 import Products from "@/components/products";
 import SectionHeader from "@/components/section-header";
-import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import Link from "next/link";
 
 export default function Home() {
   return (
