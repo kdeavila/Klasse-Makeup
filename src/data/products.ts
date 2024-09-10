@@ -15,7 +15,7 @@ const arrayProducts = [
     image: "/imagen2.jpg",
     description:
       "La Paleta de Sombras Glamour ofrece una impresionante colección de colores vibrantes y duraderos, perfectos para crear looks de maquillaje espectaculares. Con una gama que incluye tonos cálidos, fríos y neutros, esta paleta es ideal tanto para el uso diario como para ocasiones especiales. Cada sombra está formulada con pigmentos intensos y una textura suave que se difumina fácilmente, garantizando una aplicación uniforme y de larga duración.",
-    favorite: false,
+    favorite: true,
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ const arrayProducts = [
     image: "/imagen5.jpg",
     description:
       "El Labial Mate Luxury ofrece un acabado mate elegante con una fórmula hidratante que evita la sequedad. Disponible en una variedad de tonos sofisticados, este labial proporciona una cobertura completa y duradera sin necesidad de reaplicaciones frecuentes. Su textura cremosa se desliza suavemente sobre los labios, dejándolos con un color intenso y un acabado aterciopelado. Ideal para cualquier ocasión, desde un día en la oficina hasta una salida nocturna.",
-    favorite: true,
+    favorite: false,
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ const arrayProducts = [
     image: "/imagen7.jpg",
     description:
       "El Corrector de Ojeras Pro está formulado para proporcionar una cobertura completa de ojeras y manchas con una textura ligera. Su fórmula enriquecida con ingredientes que iluminan y rejuvenecen el área de los ojos ayuda a reducir la apariencia de fatiga. Su aplicador preciso facilita la aplicación y la mezcla, logrando un acabado natural que se mantiene fresco durante todo el día. Ideal para todos los tipos de piel, este corrector es perfecto para un look radiante y descansado.",
-    favorite: true,
+    favorite: false,
   },
   {
     id: 8,
@@ -114,7 +114,7 @@ const arrayProducts = [
     image: "/imagen13.jpg",
     description:
       "El Gel Fijador de Cejas asegura que tus cejas se mantengan en su lugar durante todo el día. Su fórmula transparente se adapta a cualquier color de cejas y proporciona una fijación duradera sin dejar residuos. Ideal para lograr un look pulido y natural, este gel es fácil de aplicar y se seca rápidamente. Perfecto para mantener las cejas en su lugar y darles un acabado definido y ordenado.",
-    favorite: false,
+    favorite: true,
   },
   {
     id: 14,
@@ -132,7 +132,7 @@ const arrayProducts = [
     image: "/imagen15.jpg",
     description:
       "El Set de Brochas Profesionales incluye una selección completa de brochas de alta calidad para todas tus necesidades de maquillaje. Cada brocha está diseñada con cerdas suaves y duraderas que permiten una aplicación precisa y uniforme de polvos, líquidos y cremas. Este set incluye brochas para base, contorno, rubor, sombras y más, ofreciendo herramientas esenciales para lograr un acabado profesional. Ideal tanto para principiantes como para maquilladores experimentados.",
-    favorite: false,
+    favorite: true,
   },
   {
     id: 16,
@@ -177,7 +177,7 @@ const arrayProducts = [
     image: "/imagen20.jpg",
     description:
       "La Crema de Noche Reparadora trabaja durante la noche para reparar y rejuvenecer la piel. Su fórmula rica en activos regeneradores y nutrientes esenciales ayuda a mejorar la textura de la piel y a reducir la aparición de líneas finas. Ideal para usar antes de dormir, esta crema deja la piel más suave y revitalizada al despertar.",
-    favorite: false,
+    favorite: true,
   },
 ];
 

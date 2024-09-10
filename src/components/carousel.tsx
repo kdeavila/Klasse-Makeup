@@ -1,7 +1,7 @@
 "use client";
 import * as React from "react";
 
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -15,18 +15,17 @@ import Autoplay from "embla-carousel-autoplay";
 import arrayProducts from "@/data/products";
 import { hashId } from "@/utils/hash";
 
-const favoriteProducts = arrayProducts
-  .filter((product) => product.favorite)
-  .slice(0, 6);
+const favoriteProducts = arrayProducts.filter((product) => product.favorite);
 
 export function CarouselProducts() {
   return (
-    <div className="w-full">
-      <div className="w-full px-14 flex justify-center items-center xl:px-0">
+    <div className="w-full mb-8">
+      <div className="w-full flex justify-center items-center">
         <Carousel
           plugins={[
             Autoplay({
-              delay: 3000,
+              delay: 4000,
+              stopOnInteraction: true,
             }),
           ]}
           opts={{
@@ -36,32 +35,35 @@ export function CarouselProducts() {
           className="w-full max-w-6xl"
         >
           <CarouselContent>
-            {favoriteProducts.map((product) => (
-              <CarouselItem
-                key={product.id}
-                className="sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
-              >
-                <Card className="overflow-hidden h-96">
-                  <CardContent className="w-full h-full group">
-                    <Link href={`/products/${hashId(product.id)}`}>
+            {favoriteProducts
+              .map((product) => (
+                <CarouselItem
+                  key={product.id}
+                  className="xs:basis-1/2 md:basis-1/3 lg:basis-1/4"
+                >
+                  <Link
+                    href={`/products/${hashId(product.id)}`}
+                    className="group"
+                  >
+                    <Card className="w-full h-72 overflow-hidden relative">
                       <Image
-                        loading="lazy"
-                        width={350}
-                        height={450}
+                        className="block w-full h-full aspect-square object-cover"
+                        width={250}
+                        height={250}
                         src={product.image}
                         alt={product.name}
-                        className="w-full h-full object-cover pointer-events-none"
                       />
-                    </Link>
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-            ))}
+                      <div className="absolute overflow-hidden inset-0 p-8 text-balance bg-gradient-to-t from-background/80 to-background/20 grid place-content-center text-2xl font-semibold transition-all opacity-0 group-hover:opacity-100">
+                        {product.name}
+                      </div>
+                    </Card>
+                  </Link>
+                </CarouselItem>
+              ))
+              .slice(0, 6)}
           </CarouselContent>
-
-          {/* Buttons */}
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2" />
+          <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2" />
         </Carousel>
       </div>
     </div>

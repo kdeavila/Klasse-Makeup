@@ -33,7 +33,7 @@ export default function Products() {
 
   return (
     <>
-      <article className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-4">
+      <article className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
         {visibleProducts.map((product) => {
           return (
             <Card
@@ -58,24 +58,24 @@ export default function Products() {
                 <h2 className="text-2xl font-bold text-pink-500">
                   ${product.price}
                 </h2>
-                <CardDescription className="line-clamp-3">
+                <CardDescription className="line-clamp-2">
                   {product.description}
                 </CardDescription>
               </CardContent>
 
-              <CardFooter className="gap-2 p-4 pt-0">
+              <CardFooter className="grid grid-cols-1 gap-2 p-4 pt-0">
                 <Link
                   href={`/product/${hashId(product.id)}`}
                   className="w-full block"
                 >
                   <Button variant="outline" className="w-full font-semibold">
-                    <Eye width={18} strokeWidth={2} className="mr-2" />
+                    <Eye width={18} strokeWidth={3} className="mr-2" />
                     Ver detalles
                   </Button>
                 </Link>
 
-                <Button variant="default" className="w-full font-semibold">
-                  <ShoppingCart width={18} strokeWidth={2} className="mr-2" />
+                <Button variant="default" className="w-full font-semibold flex flex-row items-center">
+                  <ShoppingCart width={18} strokeWidth={3} className="mr-2" />
                   Agregar al carrito
                 </Button>
               </CardFooter>
