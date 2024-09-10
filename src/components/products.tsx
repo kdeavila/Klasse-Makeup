@@ -84,7 +84,7 @@ export default function Products() {
         })}
       </article>
       <Button
-        className="block mx-auto"
+        className="block mx-auto mb-4"
         variant="ghost"
         onClick={loadMoreProducts}
       >

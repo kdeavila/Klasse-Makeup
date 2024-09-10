@@ -11,8 +11,8 @@ const SectionHeader: React.FC<ProductSectionHeaderProps> = ({
 }) => {
   return (
     <div className="w-full text-left mb-4">
-      <h1 className="text-3xl font-semibold leading-tight">{title}</h1>
-      <p className="text-lg text-muted-foreground">
+      <h1 className="text-2xl font-semibold leading-tight">{title}</h1>
+      <p className="text-base text-muted-foreground">
         {description}
       </p>
     </div>

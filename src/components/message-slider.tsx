@@ -18,7 +18,7 @@ const messages = [
 
 export function MessageSlider() {
   return (
-    <div className="w-full mb-8">
+    <div className="w-full">
       <div className="w-full flex justify-center items-center">
         <Carousel
           plugins={[
@@ -39,7 +39,7 @@ export function MessageSlider() {
                 key={i}
                 className="flex items-center justify-center bg-muted text-muted-foreground"
               >
-                <div className="w-full grid place-content-center p-3 text-base text-balance">
+                <div className="w-full grid place-content-center text-base text-balance p-1 xs:p-2">
                   {message}
                 </div>
               </CarouselItem>
