@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function NotFound() {
   return (
     <main>
-      <div className="grid place-content-center text-center min-h-[calc(100vh-10rem)]">
+      <div className="grid place-content-center text-center h-[calc(100vh-10rem)] min-h-96">
         <h1 className="text-8xl font-bold text-pink-500">404</h1>
 
         <Separator className="my-4" />

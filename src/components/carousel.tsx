@@ -19,7 +19,7 @@ const favoriteProducts = arrayProducts.filter((product) => product.favorite);
 
 export function CarouselProducts() {
   return (
-    <div className="w-full mb-8">
+    <div className="w-full mb-section-bottom">
       <div className="w-full flex justify-center items-center">
         <Carousel
           plugins={[
@@ -45,9 +45,9 @@ export function CarouselProducts() {
                     href={`/products/${hashId(product.id)}`}
                     className="group"
                   >
-                    <Card className="w-full h-72 overflow-hidden relative">
+                    <Card className="w-full h-72 relative bg-transparent p-4 shadow">
                       <Image
-                        className="block w-full h-full aspect-square object-cover"
+                        className="block w-full h-full aspect-square object-cover rounded"
                         width={250}
                         height={250}
                         src={product.image}
@@ -62,8 +62,8 @@ export function CarouselProducts() {
               ))
               .slice(0, 6)}
           </CarouselContent>
-          <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2" />
-          <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2" />
+          <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 hidden md:flex" />
+          <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/ hidden md:flex" />
         </Carousel>
       </div>
     </div>

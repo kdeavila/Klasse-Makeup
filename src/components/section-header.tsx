@@ -10,7 +10,7 @@ const SectionHeader: React.FC<ProductSectionHeaderProps> = ({
   description,
 }) => {
   return (
-    <div className="w-full text-left mb-4">
+    <div className="w-full text-left mb-section-bottom md:text-center">
       <h1 className="text-2xl font-semibold leading-tight">{title}</h1>
       <p className="text-base text-muted-foreground">
         {description}

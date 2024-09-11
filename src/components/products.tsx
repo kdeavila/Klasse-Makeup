@@ -33,7 +33,7 @@ export default function Products() {
 
   return (
     <>
-      <article className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
+      <article className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-section-bottom">
         {visibleProducts.map((product) => {
           return (
             <Card
@@ -42,7 +42,6 @@ export default function Products() {
             >
               <div className="w-full h-full basis-1/2 overflow-hidden">
                 <Image
-                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 duration-300"
                   src={product.image}
                   width={350}
@@ -52,7 +51,7 @@ export default function Products() {
               </div>
 
               <CardContent className="px-4 py-2 text-left grow">
-                <CardTitle className="text-lg leading-tight font-semibold">
+                <CardTitle className="text-lg leading-tight font-semibold line-clamp-1">
                   {product.name}
                 </CardTitle>
                 <h2 className="text-2xl font-bold text-pink-500">
@@ -65,7 +64,7 @@ export default function Products() {
 
               <CardFooter className="grid grid-cols-1 gap-2 p-4 pt-0">
                 <Link
-                  href={`/product/${hashId(product.id)}`}
+                  href={`/products/${hashId(product.id)}`}
                   className="w-full block"
                 >
                   <Button variant="outline" className="w-full font-semibold">
@@ -84,8 +83,8 @@ export default function Products() {
         })}
       </article>
       <Button
-        className="block mx-auto mb-4"
-        variant="ghost"
+        className="block mx-auto mb-section-bottom hover:bg-muted"
+        variant="outline"
         onClick={loadMoreProducts}
       >
         Ver más productos

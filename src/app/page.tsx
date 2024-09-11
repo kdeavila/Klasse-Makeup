@@ -1,6 +1,6 @@
 import { CarouselProducts } from "@/components/carousel";
 import { FAQ } from "@/components/faq";
-import HeroSection from "@/components/hero";
+import Hero from "@/components/hero";
 import { MessageSlider } from "@/components/message-slider";
 import Products from "@/components/products";
 import SectionHeader from "@/components/section-header";
@@ -8,13 +8,13 @@ import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   return (
-    <main className="mt-20 text-center">
+    <main className="mt-16 text-center">
       <MessageSlider />
-      <HeroSection />
+      <Hero />
 
-      <section className="w-full max-w-6xl mx-auto flex flex-col items-center mb-8 px-8 xl:px-0">
+      <section className="w-full max-w-6xl mx-auto flex flex-col items-center mb-section-bottom px-8 xl:px-0">
         <SectionHeader
-          title="Productos estrellas ✨"
+          title="Productos populares"
           description="Algunos de nuestros productos más vendidos:"
         />
         <CarouselProducts />
@@ -22,7 +22,7 @@ export default function Home() {
       </section>
       <section
         id="products"
-        className="w-full max-w-6xl mx-auto flex flex-col items-center justify-center mb-8 px-8 xl:px-0 "
+        className="w-full max-w-6xl mx-auto flex flex-col items-center justify-center mb-section-bottom px-8 xl:px-0 "
       >
         <SectionHeader
           title="Nuestros productos"
@@ -32,7 +32,7 @@ export default function Home() {
         <Separator />
       </section>
 
-      <section className="w-full max-w-6xl mx-auto px-8 xl:px-0">
+      <section className="w-full max-w-6xl mx-auto px-8 xl:px-0 mb-section-bottom">
         <SectionHeader
           title="Preguntas frecuentes"
           description="ALgunas dudas frecuentes de nuestra tienda:"
