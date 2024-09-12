@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { BrandValues } from "./components/brand-values";
 import { HeartHandshakeIcon, Settings, Users } from "lucide-react";
 import { ImagesAboutUs } from "./components/image-about";

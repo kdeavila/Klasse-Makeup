@@ -7,8 +7,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import categories from "@/data/categories";
-import { ChevronRight, Menu } from "lucide-react";
-import Link from "next/link";
+import { Menu } from "lucide-react";
 import { useState } from "react";
 import LinkMenuMobile from "./link-menu-mobile";
 
