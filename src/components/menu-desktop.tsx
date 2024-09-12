@@ -48,7 +48,7 @@ export function MenuDesktop() {
           <NavigationMenuTrigger>Nosotros</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              <ListItem title="Quiénes somos" href="/about-us">
+              <ListItem title="Quiénes somos" href="/pages/about-us">
                 Las mejores marcas y el mejor servicio en el mercado a tu
                 disposición.
               </ListItem>

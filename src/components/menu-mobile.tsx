@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
   Popover,
@@ -7,28 +9,34 @@ import {
 import categories from "@/data/categories";
 import { ChevronRight, Menu } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
+import LinkMenuMobile from "./link-menu-mobile";
 
 export function MenuMobile() {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleClickOpen = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <Popover>
+    <Popover open={isOpen} onOpenChange={setIsOpen}>
       <PopoverTrigger asChild className="md:hidden">
         <Button variant="ghost" className="p-0">
           <Menu strokeWidth={2} />
         </Button>
       </PopoverTrigger>
+
       <PopoverContent className="w-80 md:hidden">
         <div className="grid grid-cols-1 space-y-2">
           <h4 className="font-medium leading-none px-3 text-pink-500">
             Productos
           </h4>
 
-          <Link
+          <LinkMenuMobile
+            handleClickOpen={handleClickOpen}
             href="/products"
-            className="flex justify-between items-center p-3 pl-8 select-none rounded-md leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-          >
-            Ver todos
-            <ChevronRight strokeWidth={2} width={16} height={16} />
-          </Link>
+            title="Todos los productos"
+          />
 
           <h4 className="font-medium leading-none px-3 text-pink-500">
             Categorías
@@ -37,14 +45,12 @@ export function MenuMobile() {
           <ul className="w-full divide-y divide-muted ">
             {categories.map((category, index) => {
               return (
-                <li key={index}>
-                  <Link
+                <li key={index} className="w-full">
+                  <LinkMenuMobile
+                    handleClickOpen={handleClickOpen}
                     href={category.href}
-                    className="flex justify-between items-center p-3 pl-8 select-none rounded-md leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                  >
-                    {category.title}
-                    <ChevronRight strokeWidth={2} width={16} height={16} />
-                  </Link>
+                    title={category.title}
+                  />
                 </li>
               );
             })}
@@ -55,24 +61,20 @@ export function MenuMobile() {
           </h4>
 
           <ul className="w-full divide-y divide-muted ">
-            <li>
-              <Link
-                href="/about-us"
-                className="flex justify-between items-center p-3 pl-8 select-none rounded-md leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-              >
-                Quiénes somos
-                <ChevronRight strokeWidth={2} width={16} height={16} />
-              </Link>
+            <li className="w-full">
+              <LinkMenuMobile
+                handleClickOpen={handleClickOpen}
+                href="/pages/about-us"
+                title="Quiénes somos"
+              />
             </li>
 
-            <li>
-              <Link
-                href="/help"
-                className="flex justify-between items-center p-3 pl-8 select-none rounded-md leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-              >
-                Ayuda
-                <ChevronRight strokeWidth={2} width={16} height={16} />
-              </Link>
+            <li className="w-full">
+              <LinkMenuMobile
+                handleClickOpen={handleClickOpen}
+                href="/pages/help"
+                title="Ayuda"
+              />
             </li>
           </ul>
         </div>
