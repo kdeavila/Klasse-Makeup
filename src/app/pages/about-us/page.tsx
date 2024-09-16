@@ -1,6 +1,7 @@
 import { BrandValues } from "./components/brand-values";
-import { HeartHandshakeIcon, Settings, Users } from "lucide-react";
+import { HeartHandshakeIcon, Settings, ShoppingBag, Users } from "lucide-react";
 import { ImagesAboutUs } from "./components/image-about";
+import { Section } from "@/components/section";
 
 const imagesAboutUs = [
   {
@@ -24,12 +25,9 @@ const imagesAboutUs = [
 export default function AboutUs() {
   return (
     <main className="mt-16 text-center">
-      <section className="py-16 px-8 xl:px-0">
-        <div className="w-full max-w-3xl mx-auto mb-8">
-          <h1 className="text-4xl font-semibold mb-4 text-primary">
-            ¿Quiénes somos?
-          </h1>
-          <p className="text-muted-foreground text-balance xl:text-lg">
+      <Section title="¿Qué es EcoShop?" className="pt-8">
+        <div className="w-full max-w-2xl mx-auto mb-section-bottom">
+          <p className="text-base text-muted-foreground text-left text-balance md:text-center">
             En EcoShop, somos una startup apasionada por transformar la belleza
             en una experiencia personal y única. Desde nuestros primeros pasos,
             nos hemos comprometido a ofrecer productos de maquillaje y
@@ -41,8 +39,8 @@ export default function AboutUs() {
           </p>
         </div>
 
-        <div className="w-full max-w-6xl mx-auto">
-          <ul className="w-full grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="w-full max-w-7xl mx-auto mb-section-bottom">
+          <ul className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <BrandValues
               title="Innovación Constante"
               description="Estamos a la vanguardia, ofreciendo productos frescos y emocionantes que marcan tendencias."
@@ -63,15 +61,22 @@ export default function AboutUs() {
             >
               <HeartHandshakeIcon strokeWidth={2} size={55} />
             </BrandValues>
+
+            <BrandValues
+              title="Sustentabilidad"
+              description="Nos comprometemos a brindar productos de alta calidad y una experiencia de compra que se adapte a tus necesidades."
+            >
+              <ShoppingBag strokeWidth={2} size={55} />
+            </BrandValues>
           </ul>
         </div>
-      </section>
 
-      <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4">
-        {imagesAboutUs.map((image) => {
-          return <ImagesAboutUs key={image.id} {...image}  />;
-        })}
-      </div>
+        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4">
+          {imagesAboutUs.map((image) => {
+            return <ImagesAboutUs key={image.id} {...image} />;
+          })}
+        </div>
+      </Section>
     </main>
   );
 }

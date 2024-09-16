@@ -13,8 +13,9 @@ import Link from "next/link";
 import arrayProducts from "@/data/products";
 import { Eye, ShoppingCart } from "lucide-react";
 import { hashId } from "@/utils/hash";
+import { formatCurrency } from "@/utils/format-currency";
 
-const PRODUCTS_PER_PAGE = 9;
+const PRODUCTS_PER_PAGE = 8;
 
 export default function Products() {
   const [visibleProducts, setVisibleProducts] = useState(
@@ -33,7 +34,7 @@ export default function Products() {
 
   return (
     <>
-      <article className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-section-bottom">
+      <article className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-section-bottom">
         {visibleProducts.map((product) => {
           return (
             <Card
@@ -54,8 +55,8 @@ export default function Products() {
                 <CardTitle className="text-lg leading-tight font-semibold line-clamp-1">
                   {product.name}
                 </CardTitle>
-                <h2 className="text-2xl font-bold text-pink-500">
-                  ${product.price}
+                <h2 className="text-lg text-foreground/80">
+                  {formatCurrency(product.price)}
                 </h2>
                 <CardDescription className="line-clamp-2">
                   {product.description}
@@ -73,7 +74,10 @@ export default function Products() {
                   </Button>
                 </Link>
 
-                <Button variant="default" className="w-full font-semibold flex flex-row items-center">
+                <Button
+                  variant="default"
+                  className="w-full font-semibold flex flex-row items-center"
+                >
                   <ShoppingCart width={18} strokeWidth={3} className="mr-2" />
                   Agregar al carrito
                 </Button>

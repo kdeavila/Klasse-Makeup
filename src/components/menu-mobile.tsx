@@ -1,83 +1,82 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
 import categories from "@/data/categories";
-import { Menu } from "lucide-react";
-import { useState } from "react";
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+
 import LinkMenuMobile from "./link-menu-mobile";
+import { Button } from "./ui/button";
+import { MenuIcon } from "lucide-react";
+import { useState } from "react";
 
 export function MenuMobile() {
   const [isOpen, setIsOpen] = useState(false);
-  const handleClickOpen = () => {
-    setIsOpen(false);
-  };
+  const handleClose = () => setIsOpen(false);
 
   return (
-    <Popover open={isOpen} onOpenChange={setIsOpen}>
-      <PopoverTrigger asChild className="md:hidden">
-        <Button variant="ghost" className="p-0">
-          <Menu strokeWidth={2} />
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
+      <SheetTrigger asChild className="flex md:hidden">
+        <Button variant="outline" className="p-2">
+          <MenuIcon />
         </Button>
-      </PopoverTrigger>
+      </SheetTrigger>
 
-      <PopoverContent className="w-80 md:hidden">
+      <SheetContent side={"left"}>
         <div className="grid grid-cols-1 space-y-2">
-          <h4 className="font-medium leading-none px-3 text-pink-500">
+          <SheetTitle className="font-medium leading-none px-3 text-pink-500">
             Productos
-          </h4>
-
+          </SheetTitle>
           <LinkMenuMobile
-            handleClickOpen={handleClickOpen}
-            href="/products"
+            href="/pages/products"
             title="Todos los productos"
+            handleClose={handleClose}
           />
 
-          <h4 className="font-medium leading-none px-3 text-pink-500">
-            Categorías
-          </h4>
+          <SheetTitle className="font-medium leading-none px-3 text-pink-500">
+            Categorias
+          </SheetTitle>
 
           <ul className="w-full divide-y divide-muted ">
             {categories.map((category, index) => {
               return (
                 <li key={index} className="w-full">
                   <LinkMenuMobile
-                    handleClickOpen={handleClickOpen}
                     href={category.href}
                     title={category.title}
+                    handleClose={handleClose}
                   />
                 </li>
               );
             })}
           </ul>
 
-          <h4 className="font-medium leading-none px-3 text-pink-500">
+          <SheetTitle className="font-medium leading-none px-3 text-pink-500">
             Nosotros
-          </h4>
+          </SheetTitle>
 
           <ul className="w-full divide-y divide-muted ">
             <li className="w-full">
               <LinkMenuMobile
-                handleClickOpen={handleClickOpen}
                 href="/pages/about-us"
                 title="Quiénes somos"
+                handleClose={handleClose}
               />
             </li>
 
             <li className="w-full">
               <LinkMenuMobile
-                handleClickOpen={handleClickOpen}
                 href="/pages/help"
                 title="Ayuda"
+                handleClose={handleClose}
               />
             </li>
           </ul>
         </div>
-      </PopoverContent>
-    </Popover>
+      </SheetContent>
+    </Sheet>
   );
 }

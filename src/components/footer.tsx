@@ -3,7 +3,7 @@ import { Separator } from "./ui/separator";
 
 export function Footer() {
   return (
-    <footer className="p-8 max-w-6xl mx-auto xl:px-0">
+    <footer className="p-8 max-w-7xl mx-auto 2xl:px-0">
       <div className="space-y-1">
         <h4 className="text-lg font-semibold leading-none mb-1">
           EcoShop Ecommerce

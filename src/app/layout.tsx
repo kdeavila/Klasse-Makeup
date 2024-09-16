@@ -3,9 +3,9 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { Montserrat } from "next/font/google";
+import { Arimo } from "next/font/google";
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const arimo = Arimo({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ecommerce",
@@ -17,7 +17,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es">
-      <body className={montserrat.className}>
+      <body className={arimo.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

@@ -82,7 +82,7 @@ const config: Config = {
   			'accordion-up': 'accordion-up 0.2s ease-out'
   		},
 		margin: {
-			'section-bottom': '2.5rem',
+			'section-bottom': '4rem',
 		}
   	}
   },

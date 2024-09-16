@@ -32,7 +32,7 @@ export function CarouselProducts() {
             align: "start",
             loop: true,
           }}
-          className="w-full max-w-6xl"
+          className="w-full max-w-7xl"
         >
           <CarouselContent>
             {favoriteProducts
@@ -45,15 +45,15 @@ export function CarouselProducts() {
                     href={`/products/${hashId(product.id)}`}
                     className="group"
                   >
-                    <Card className="w-full h-72 relative bg-transparent p-4 shadow">
+                    <Card className="w-full h-96 relative bg-transparent">
                       <Image
-                        className="block w-full h-full aspect-square object-cover rounded"
+                        className="block w-full h-full aspect-square object-cover"
                         width={250}
                         height={250}
                         src={product.image}
                         alt={product.name}
                       />
-                      <div className="absolute overflow-hidden inset-0 p-8 text-balance bg-gradient-to-t from-background/80 to-background/20 grid place-content-center text-2xl font-semibold transition-all opacity-0 group-hover:opacity-100">
+                      <div className="absolute overflow-hidden inset-0 p-8 text-balance bg-background/90 grid place-content-center text-2xl font-semibold transition-all opacity-0 group-hover:opacity-100">
                         {product.name}
                       </div>
                     </Card>
@@ -62,8 +62,8 @@ export function CarouselProducts() {
               ))
               .slice(0, 6)}
           </CarouselContent>
-          <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 hidden md:flex" />
-          <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/ hidden md:flex" />
+          <CarouselPrevious className="hidden 2xl:inline-flex" />
+          <CarouselNext className="hidden 2xl:inline-flex" />
         </Carousel>
       </div>
     </div>

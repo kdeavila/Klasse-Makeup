@@ -35,7 +35,7 @@ export function FAQ() {
       {faqs.map(({ title, description }) => (
         <AccordionItem key={title} value={title}>
           <AccordionTrigger className="text-left">{title}</AccordionTrigger>
-          <AccordionContent className="text-left">
+          <AccordionContent className="text-left text-primary/80">
             {description}
           </AccordionContent>
         </AccordionItem>

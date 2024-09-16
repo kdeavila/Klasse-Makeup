@@ -20,7 +20,7 @@ export function MenuDesktop() {
     <NavigationMenu className="hidden md:flex">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <Link href="/products" legacyBehavior passHref>
+          <Link href="/pages/products" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Todos los productos
             </NavigationMenuLink>
@@ -53,7 +53,7 @@ export function MenuDesktop() {
                 disposición.
               </ListItem>
 
-              <ListItem title="Ayuda" href="/help">
+              <ListItem title="Ayuda" href="/pages/help">
                 Encuentra respuestas a las preguntas más frecuentes y obtén
                 asistencia con nuestros servicios.
               </ListItem>

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className="relative h-[calc(100vh-8rem)] min-h-96 flex items-center text-left overflow-hidden mb-section-bottom">
+    <div className="relative h-[calc(100vh-16rem)] min-h-96 flex items-center text-left overflow-hidden mb-section-bottom">
       <div className="absolute h-full w-full bottom-0 left-0 bg-gradient-to-r from-background to-background/15 z-10"></div>
       <picture className="absolute inset-0 w-full h-full z-0 blur-sm">
         <source media="(max-width: 468px)" srcSet="/hero-img-mobile.jpg" />
