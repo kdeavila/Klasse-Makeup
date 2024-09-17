@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
 interface SectionProps {
   children?: ReactNode;

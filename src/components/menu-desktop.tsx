@@ -20,7 +20,7 @@ export function MenuDesktop() {
     <NavigationMenu className="hidden md:flex">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <Link href="/pages/products" legacyBehavior passHref>
+          <Link href="/products" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Todos los productos
             </NavigationMenuLink>
@@ -48,12 +48,12 @@ export function MenuDesktop() {
           <NavigationMenuTrigger>Nosotros</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              <ListItem title="Quiénes somos" href="/pages/about-us">
+              <ListItem title="Quiénes somos" href="/about-us">
                 Las mejores marcas y el mejor servicio en el mercado a tu
                 disposición.
               </ListItem>
 
-              <ListItem title="Ayuda" href="/pages/help">
+              <ListItem title="Ayuda" href="/help">
                 Encuentra respuestas a las preguntas más frecuentes y obtén
                 asistencia con nuestros servicios.
               </ListItem>

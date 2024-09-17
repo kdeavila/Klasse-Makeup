@@ -44,9 +44,9 @@ export default function Products() {
               <div className="w-full h-full basis-1/2 overflow-hidden">
                 <Image
                   className="w-full h-full object-cover group-hover:scale-105 duration-300"
-                  src={product.image}
-                  width={350}
-                  height={450}
+                  src={product.images[0]}
+                  height={300}
+                  width={300}
                   alt={product.name}
                 />
               </div>
@@ -65,7 +65,7 @@ export default function Products() {
 
               <CardFooter className="grid grid-cols-1 gap-2 p-4 pt-0">
                 <Link
-                  href={`/products/${hashId(product.id)}`}
+                  href={`/products/product/${hashId(product.id)}`}
                   className="w-full block"
                 >
                   <Button variant="outline" className="w-full font-semibold">
@@ -86,12 +86,13 @@ export default function Products() {
           );
         })}
       </article>
+
       <Button
-        className="block mx-auto mb-section-bottom hover:bg-muted"
+        className="block mx-auto hover:bg-muted"
         variant="outline"
         onClick={loadMoreProducts}
       >
-        Ver más productos
+        Ver más
       </Button>
     </>
   );

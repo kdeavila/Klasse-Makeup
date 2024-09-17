@@ -31,7 +31,7 @@ export function MenuMobile() {
             Productos
           </SheetTitle>
           <LinkMenuMobile
-            href="/pages/products"
+            href="/products"
             title="Todos los productos"
             handleClose={handleClose}
           />
@@ -61,7 +61,7 @@ export function MenuMobile() {
           <ul className="w-full divide-y divide-muted ">
             <li className="w-full">
               <LinkMenuMobile
-                href="/pages/about-us"
+                href="/about-us"
                 title="Quiénes somos"
                 handleClose={handleClose}
               />
@@ -69,7 +69,7 @@ export function MenuMobile() {
 
             <li className="w-full">
               <LinkMenuMobile
-                href="/pages/help"
+                href="/help"
                 title="Ayuda"
                 handleClose={handleClose}
               />

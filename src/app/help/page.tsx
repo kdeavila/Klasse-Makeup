@@ -6,7 +6,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Help() {
   return (
-    <main className="mt-16 text-center">
+    <main className="text-center">
       <Section
         title="Preguntas frecuentes"
         description="Nuestros clientes preguntan"

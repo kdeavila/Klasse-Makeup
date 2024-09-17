@@ -24,7 +24,7 @@ const imagesAboutUs = [
 
 export default function AboutUs() {
   return (
-    <main className="mt-16 text-center">
+    <main className="text-center">
       <Section title="¿Qué es EcoShop?" className="pt-8">
         <div className="w-full max-w-2xl mx-auto mb-section-bottom">
           <p className="text-base text-muted-foreground text-left text-balance md:text-center">
