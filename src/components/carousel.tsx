@@ -42,7 +42,7 @@ export function CarouselProducts() {
                   className="xs:basis-1/2 md:basis-1/3 lg:basis-1/4"
                 >
                   <Link
-                    href={`/products/${hashId(product.id)}`}
+                    href={`/products/product/${hashId(product.id)}`}
                     className="group"
                   >
                     <Card className="w-full h-96 relative bg-transparent">
@@ -50,10 +50,10 @@ export function CarouselProducts() {
                         className="block w-full h-full aspect-square object-cover"
                         width={250}
                         height={250}
-                        src={product.image}
+                        src={product.images[0]}
                         alt={product.name}
                       />
-                      <div className="absolute overflow-hidden inset-0 p-8 text-balance bg-background/90 grid place-content-center text-2xl font-semibold transition-all opacity-0 group-hover:opacity-100">
+                      <div className="absolute overflow-hidden inset-0 p-6 text-left bg-background/70 flex items-end text-3xl uppercase line-clamp-2 font-bold transition-all opacity-0 group-hover:opacity-100">
                         {product.name}
                       </div>
                     </Card>
