@@ -10,7 +10,6 @@ import {
   CardFooter,
   CardTitle,
 } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import arrayProducts from "@/data/products";
 import { formatCurrency } from "@/utils/format-currency";
 import { hashId } from "@/utils/hash";
@@ -31,7 +30,6 @@ export default function Home() {
         description="Algunos de nuestros productos más vendidos:"
       >
         <CarouselProducts />
-        <Separator />
       </Section>
 
       <Section
@@ -92,7 +90,7 @@ export default function Home() {
         </article>
 
         <Link
-          className="block items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 mx-auto mb-section-bottom hover:bg-muted border border-input bg-background hover:text-accent-foreground p-2"
+          className="block items-center justify-center whitespace-nowrap text-sm font-medium transition-colors mx-auto hover:bg-muted border hover:text-accent-foreground p-2"
           href="/products"
         >
           Ver todos los productos

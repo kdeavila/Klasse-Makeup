@@ -21,8 +21,8 @@ export function MessageSlider() {
         <Carousel
           plugins={[
             Autoplay({
-              delay: 4000,
-              stopOnInteraction: true,
+              delay: 3000,
+              stopOnInteraction: false,
             }),
           ]}
           opts={{
@@ -35,7 +35,7 @@ export function MessageSlider() {
             {messages.map((message, i) => (
               <CarouselItem
                 key={i}
-                className="flex items-center justify-center bg-muted text-muted-foreground"
+                className="flex items-center justify-center bg-primary text-primary-foreground dark:bg-background dark:text-foreground"
               >
                 <div className="w-full grid place-content-center text-base text-balance p-1 xs:p-2">
                   {message}

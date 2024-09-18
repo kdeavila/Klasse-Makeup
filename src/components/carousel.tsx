@@ -19,13 +19,13 @@ const favoriteProducts = arrayProducts.filter((product) => product.favorite);
 
 export function CarouselProducts() {
   return (
-    <div className="w-full mb-section-bottom">
+    <div className="w-full">
       <div className="w-full flex justify-center items-center">
         <Carousel
           plugins={[
             Autoplay({
-              delay: 4000,
-              stopOnInteraction: true,
+              delay: 3000,
+              stopOnInteraction: false,
             }),
           ]}
           opts={{
@@ -62,8 +62,8 @@ export function CarouselProducts() {
               ))
               .slice(0, 6)}
           </CarouselContent>
-          <CarouselPrevious className="hidden 2xl:inline-flex" />
-          <CarouselNext className="hidden 2xl:inline-flex" />
+          <CarouselNext className="border-none text-pink-500 hover:text-pink-400 bg-transparent hover:bg-transparent absolute -translate-x-2 right-0" />
+          <CarouselPrevious className="border-none text-pink-500 hover:text-pink-400 bg-transparent hover:bg-transparent absolute translate-x-2 left-0" />
         </Carousel>
       </div>
     </div>
