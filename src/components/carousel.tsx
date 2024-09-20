@@ -48,8 +48,8 @@ export function CarouselProducts() {
                     <Card className="w-full h-96 relative bg-transparent">
                       <Image
                         className="block w-full h-full aspect-square object-cover"
-                        width={250}
-                        height={250}
+                        width={350}
+                        height={350}
                         src={product.images[0]}
                         alt={product.name}
                       />

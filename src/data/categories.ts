@@ -24,8 +24,8 @@ const categories: { title: string; href: string; description: string }[] = [
       "Esmaltes, tratamientos y herramientas para el cuidado y embellecimiento de las uñas.",
   },
   {
-    title: "Herramientas",
-    href: "/products/tools",
+    title: "Accesorios",
+    href: "/products/accessories",
     description:
       "Brochas, esponjas y otros accesorios para aplicar y difuminar el maquillaje de manera profesional.",
   },

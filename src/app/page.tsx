@@ -10,6 +10,7 @@ import {
   CardFooter,
   CardTitle,
 } from "@/components/ui/card";
+import { VideoCategories } from "@/components/video-categories";
 import arrayProducts from "@/data/products";
 import { formatCurrency } from "@/utils/format-currency";
 import { hashId } from "@/utils/hash";
@@ -95,6 +96,13 @@ export default function Home() {
         >
           Ver todos los productos
         </Link>
+      </Section>
+
+      <Section
+        title="Look TikTok"
+        description="Comparte un video utilizando nuestros productos"
+      >
+        <VideoCategories />
       </Section>
     </main>
   );
