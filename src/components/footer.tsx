@@ -4,18 +4,27 @@ import { Separator } from "./ui/separator";
 import { useEffect, useState } from "react";
 
 export function Footer() {
-  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 648);
+  // Initialize the state to false
+  const [isWideScreen, setIsWideScreen] = useState(false);
 
   useEffect(() => {
+    // Function to update state based on window width
     const handleResize = () => {
       setIsWideScreen(window.innerWidth > 648);
     };
 
+    // Call it once to set the initial value
+    handleResize();
+
+    // Add event listener for resize events
     window.addEventListener("resize", handleResize);
+
+    // Cleanup listener on unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   return (
     <footer className="bg-foreground dark:bg-primary-foreground text-primary-foreground dark:text-foreground mx-auto 2xl:px-0">
       {isWideScreen ? (
@@ -35,7 +44,6 @@ export function Footer() {
                 />
               </svg>
             </Link>
-
             <div className="items-center flex text-sm">
               <Link className="px-6" href="/">
                 Inicio
@@ -63,7 +71,6 @@ export function Footer() {
               </Link>
             </div>
           </div>
-
           <p className="mt-8 text-sm text-muted-foreground">
             &copy; Todos los derechos reservados.
           </p>
@@ -85,7 +92,6 @@ export function Footer() {
                 />
               </svg>
             </Link>
-
             <div className="flex flex-col text-sm">
               <Link className="py-3" href="/">
                 Inicio
@@ -113,7 +119,6 @@ export function Footer() {
               </Link>
             </div>
           </div>
-
           <p className="mt-8 text-sm text-muted-foreground">
             &copy; Todos los derechos reservados.
           </p>

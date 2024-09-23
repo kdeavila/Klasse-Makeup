@@ -1,8 +1,18 @@
 import { CardProduct } from "@/app/products/components/card-product";
 import { ReactNode } from "react";
 
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  images: string[];
+  description: string;
+  favorite: boolean;
+  category: string;
+}
+
 interface ProductsProps {
-  arrayProducts: any[];
+  arrayProducts: Product[];
   children?: ReactNode;
 }
 

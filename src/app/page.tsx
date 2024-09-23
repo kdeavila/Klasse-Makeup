@@ -4,10 +4,8 @@ import Hero from "@/components/hero";
 import { MessageSlider } from "@/components/message-slider";
 import Products from "@/components/products-page";
 import { Section } from "@/components/section";
-import { Separator } from "@/components/ui/separator";
 import { VideoCategories } from "@/components/video-categories";
 import arrayProducts from "@/data/products";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
