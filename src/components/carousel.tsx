@@ -35,32 +35,30 @@ export function CarouselProducts() {
           className="w-full max-w-7xl"
         >
           <CarouselContent>
-            {favoriteProducts
-              .map((product) => (
-                <CarouselItem
-                  key={product.id}
-                  className="xs:basis-1/2 md:basis-1/3 lg:basis-1/4"
+            {favoriteProducts.map((product) => (
+              <CarouselItem
+                key={product.id}
+                className="xs:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+              >
+                <Link
+                  href={`/products/product/${hashId(product.id)}`}
+                  className="group"
                 >
-                  <Link
-                    href={`/products/product/${hashId(product.id)}`}
-                    className="group"
-                  >
-                    <Card className="w-full h-96 relative bg-transparent">
-                      <Image
-                        className="block w-full h-full aspect-square object-cover"
-                        width={350}
-                        height={350}
-                        src={product.images[0]}
-                        alt={product.name}
-                      />
-                      <div className="absolute overflow-hidden inset-0 p-6 text-left bg-background/70 flex items-end text-3xl uppercase line-clamp-2 font-bold transition-all opacity-0 group-hover:opacity-100">
-                        {product.name}
-                      </div>
-                    </Card>
-                  </Link>
-                </CarouselItem>
-              ))
-              .slice(0, 6)}
+                  <Card className="w-full h-72 relative bg-transparent">
+                    <Image
+                      className="block w-full h-full aspect-square object-cover"
+                      width={350}
+                      height={350}
+                      src={product.images[0]}
+                      alt={product.name}
+                    />
+                    <div className="absolute overflow-hidden inset-0 p-6 text-left bg-background/70 flex items-end text-3xl uppercase line-clamp-2 font-bold transition-all opacity-0 group-hover:opacity-100">
+                      {product.name}
+                    </div>
+                  </Card>
+                </Link>
+              </CarouselItem>
+            ))}
           </CarouselContent>
           <CarouselNext className="border-none text-pink-500 hover:text-pink-400 bg-transparent hover:bg-transparent absolute -translate-x-2 right-0" />
           <CarouselPrevious className="border-none text-pink-500 hover:text-pink-400 bg-transparent hover:bg-transparent absolute translate-x-2 left-0" />

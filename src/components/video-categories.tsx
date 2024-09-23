@@ -31,26 +31,26 @@ export function VideoCategories() {
     },
   ];
   return (
-    <div className="w-full grid grid-cols-1 items-center lg:grid-cols-2 gap-8">
-      <div className="w-full aspect-[9/16] xs:max-w-96 mx-auto">
+    <div className="w-full grid items-center gap-8">
+      <div className="w-full max-w-5xl mx-auto aspect-video overflow-hidden">
         <video
-          src="/video-category/video-tiktok.mov"
+          src="/video-category/video-tiktok.mp4"
           autoPlay
           loop
           controls
           muted
-          className="w-full h-full object-contain"
+          className="w-full h-full object-cover"
         ></video>
       </div>
 
-      <div className="grid grid-cols-1 xs:grid-cols-2 gap-6">
+      <div className="w-full grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-6">
         {categoryArray.map((product) => {
           const { id, name, src, href } = product;
 
           return (
             <Link key={id} href={href}>
               <Card className="w-full flex flex-col items-center gap-4 p-4 group bg-background hover:bg-muted transition-colors duration-300">
-                <CardHeader className="w-40 p-0">
+                <CardHeader className="w-36 p-0">
                   <Image
                     className="w-full h-full aspect-square object-cover group-hover:scale-105 duration-300"
                     src={src}
@@ -61,8 +61,9 @@ export function VideoCategories() {
                 </CardHeader>
 
                 <CardContent className="flex flex-col items-center space-y-2">
-                  <h1 className="text-lg font-medium">{name}</h1>
-                  <ChevronRight strokeWidth={2} />
+                  <span className="inline-flex items-center gap-1 text-lg font-medium">
+                    {name} <ChevronRight width={16} strokeWidth={2} />
+                  </span>
                 </CardContent>
               </Card>
             </Link>
