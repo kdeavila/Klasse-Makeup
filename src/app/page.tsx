@@ -17,21 +17,16 @@ export default function Home() {
       <Hero />
 
       <Section
-        title="Productos populares"
-        description="Algunos de nuestros productos más vendidos:"
-      >
-        <CarouselProducts />
-      </Section>
-
-      <Section
         title="Nuestros productos"
         description="La mejor elección de productos para tu makeup:"
       >
-        <Products arrayProducts={products}></Products>
+        <Products arrayProducts={products} />
         <Link className="text-sm" href="/products">
           Ver todos los productos ...
         </Link>
       </Section>
+
+      <GallerySection />
 
       <Section
         title="Look TikTok"
@@ -40,7 +35,13 @@ export default function Home() {
         <VideoCategories />
       </Section>
 
-      <GallerySection />
+      <Section
+        title="Productos populares"
+        description="Algunos de nuestros productos más vendidos:"
+      >
+        <CarouselProducts />
+      </Section>
+
     </main>
   );
 }

@@ -25,7 +25,7 @@ const imagesAboutUs = [
 export default function AboutUs() {
   return (
     <main className="text-center">
-      <Section title="¿Qué es EcoShop?" className="pt-8">
+      <Section title="¿Qué es EcoShop?" description="Estamos aquí gracias a ti." className="pt-8">
         <div className="w-full max-w-2xl mx-auto mb-section-bottom">
           <p className="text-base text-muted-foreground text-left text-balance md:text-center">
             En EcoShop, somos una startup apasionada por transformar la belleza

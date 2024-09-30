@@ -16,7 +16,7 @@ export default function Hero() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 540);
     };
 
     window.addEventListener("resize", handleResize);
@@ -29,16 +29,16 @@ export default function Hero() {
 
   const images = isMobile
     ? [
-        "/hero-slider/Banner-Guasha-mobile.jpg",
-        "/hero-slider/Banner-Mobile-Bloomshell.jpg",
-        "/hero-slider/Banner-ProductoMes-Septiembre-mobile.jpg",
-        "/hero-slider/Banner-wonder-mobile.jpg",
+        "https://i.postimg.cc/65rLt8dJ/Banner-Guasha-mobile.jpg",
+        "https://i.postimg.cc/YCtN9t34/Banner-Mobile-Bloomshell.jpg",
+        "https://i.postimg.cc/1ztpGMbs/Banner-Producto-Mes-Septiembre-Mobile.jpg",
+        "https://i.postimg.cc/0QKD3j84/Banner-wonder-Mobile.jpg",
       ]
     : [
-        "/hero-slider/Banner-Guasha-pc.jpg",
-        "/hero-slider/Banner-PC-Bloomshell.jpg",
-        "/hero-slider/Banner-ProductoMes-Septiembre-pc.jpg",
-        "/hero-slider/Banner-wonder-pc.jpg",
+        "https://i.postimg.cc/MGF1dV8R/Banner-Guasha-pc.jpg",
+        "https://i.postimg.cc/pLkf53Gs/Banner-PC-Bloomshell.jpg",
+        "https://i.postimg.cc/L5dLMS58/Banner-Producto-Mes-Septiembre-pc.jpg",
+        "https://i.postimg.cc/QCp58zKk/Banner-wonder-pc.jpg",
       ];
 
   return (
@@ -59,14 +59,15 @@ export default function Hero() {
         {images.map((image, index) => (
           <CarouselItem
             key={index}
-            className="w-full h-72 pl-0 md:h-96 xl:h-[600px]"
+            className="relative w-full h-72 pl-0 md:h-96 xl:h-[460px]"
           >
             <Image
-              className="w-full h-full object-cover"
               src={image}
-              width={1920}
-              height={1080}
-              alt="hero image"
+              alt="Hero slider image"
+              layout="fill"
+              objectFit="cover"
+              priority
+              className="object-cover"
             />
           </CarouselItem>
         ))}

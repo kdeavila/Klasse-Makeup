@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
 import { Arimo } from "next/font/google";
+import Footer from "@/components/footer";
 
 const arimo = Arimo({ subsets: ["latin"] });
 

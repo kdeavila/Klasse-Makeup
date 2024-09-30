@@ -21,7 +21,7 @@ export function MessageSlider() {
         <Carousel
           plugins={[
             Autoplay({
-              delay: 3000,
+              delay: 4000,
               stopOnInteraction: false,
             }),
           ]}

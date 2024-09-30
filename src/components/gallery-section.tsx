@@ -6,37 +6,41 @@ export default function GallerySection() {
       <div className="w-full h-full overflow-hidden cursor-pointer group row-span-2 col-span-2">
         <Image
           className="w-full h-full object-cover group-hover:scale-105  transition-transform duration-300s"
-          alt="promotion"
-          src="/mid-section/imagen1.jpg"
-          width={700}
-          height={700}
+          alt="image brand gallery"
+          src="https://i.postimg.cc/MGv96W67/imagen1.jpg"
+          width={500}
+          height={500}
+          objectFit="cover"
         />
       </div>
       <div className="w-full h-full overflow-hidden cursor-pointer group col-span-2">
         <Image
           className="w-full h-full object-cover group-hover:scale-105  transition-transform duration-300"
-          alt="promotion"
-          src="/mid-section/imagen2.jpg"
-          width={700}
-          height={700}
+          alt="image brand gallery"
+          src="https://i.postimg.cc/pd4qygrg/imagen2.jpg"
+          width={500}
+          height={500}
+          objectFit="cover"
         />
       </div>
       <div className="w-full h-full overflow-hidden cursor-pointer group">
         <Image
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-          alt="promotion"
-          src="/mid-section/imagen3.webp"
-          width={700}
-          height={700}
+          alt="image brand gallery"
+          src="https://i.postimg.cc/LXPvPNZh/imagen3.webp"
+          width={500}
+          height={500}
+          objectFit="cover"
         />
       </div>
       <div className="w-full h-full overflow-hidden cursor-pointer group">
         <Image
           className="w-full h-full object-cover group-hover:scale-105  transition-transform duration-300"
-          alt="promotion"
-          src="/mid-section/imagen4.webp  "
-          width={700}
-          height={700}
+          alt="image brand gallery"
+          src="https://i.postimg.cc/NFwDkm1D/imagen4.webp"
+          width={500}
+          height={500}
+          objectFit="cover"
         />
       </div>
     </section>
