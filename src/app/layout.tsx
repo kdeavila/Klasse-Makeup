@@ -1,34 +1,34 @@
-import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Navbar } from "@/components/navbar";
-import { Arimo } from "next/font/google";
+import type {Metadata} from "next";
+import {ThemeProvider} from "@/components/theme-provider";
+import {Navbar} from "@/components/navbar";
 import Footer from "@/components/footer";
-
-const arimo = Arimo({ subsets: ["latin"] });
+import React from "react";
+import {Toaster} from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: "Ecommerce",
-  description: "Shop with ease!",
+    title: "Klasse Makeup 💄",
+    description: "Tienda online de productos de maquillaje y accesorios. Klasse Makeup tiene todo tipo de productos para tu belleza.",
 };
 
 export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <html lang="es">
-      <body className={arimo.className}>
+                                       children,
+                                   }: Readonly<{ children: React.ReactNode }>) {
+    return (
+        <html lang="es">
+        <body className="font-arimo">
         <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
         >
-          <Navbar />
-          {children}
-          <Footer />
+            <Navbar/>
+            {children}
+            <Footer/>
+            <Toaster/>
         </ThemeProvider>
-      </body>
-    </html>
-  );
+        </body>
+        </html>
+    );
 }

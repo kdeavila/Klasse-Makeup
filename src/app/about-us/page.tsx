@@ -6,19 +6,19 @@ import { Section } from "@/components/section";
 const imagesAboutUs = [
   {
     id: 1,
-    src: "/about-us/image1.jpg",
+    src: "/about-us/image1.webp",
   },
   {
     id: 2,
-    src: "/about-us/image2.jpg",
+    src: "/about-us/image2.webp",
   },
   {
     id: 3,
-    src: "/about-us/image3.jpg",
+    src: "/about-us/image3.webp",
   },
   {
     id: 4,
-    src: "/about-us/image4.jpg",
+    src: "/about-us/image4.webp",
   },
 ];
 
