@@ -1,8 +1,8 @@
-# Proyecto eCommerce
 
+# Proyecto eCommerce
 ¡Bienvenido a mi proyecto de eCommerce! Este es un sitio web desarrollado con TypeScript, Tailwind CSS y Next.js que permite a los usuarios navegar y comprar productos de manera fácil y rápida.
 
-![Vista del Proyecto](https://i.postimg.cc/52wxPVdm/Sms-TRWjds-PO.png)
+![Vista del Proyecto](https://i.postimg.cc/B6cMkvsv/998shots-so.webp)
 
 ## Tecnologías Utilizadas
 
@@ -19,4 +19,9 @@ Este proyecto utiliza las siguientes tecnologías y librerías:
 Para clonar el proyecto, usa el siguiente comando:
 
 ```bash
-git clone https://github.com/tuusuario/tu-repo.git
+git clone https://github.com/kdeavila/frontend-ecommerce
+
+cd frontend-ecommerce
+npm install
+npm run dev
+```

@@ -31,7 +31,7 @@ export default function Footer() {
     ]
 
     return (
-        <footer className="bg-primary text-primary-foreground dark:bg-background dark:text-foreground">
+        <footer className="bg-primary text-primary-foreground dark:bg-muted dark:text-foreground">
             <div className="w-full max-w-7xl mx-auto p-8 2xl:px-0">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center pt-8">
                     <div className="block sm:mb-0">
@@ -56,7 +56,7 @@ export default function Footer() {
                                 <li key={link.href} className="w-full sm:w-auto">
                                     <Link
                                         href={link.href}
-                                        className="block text-left py-3 border-b-[1px] text-muted-foreground sm:border-b-0 border-muted-foreground/30"
+                                        className="block text-left py-3 border-b-[1px] text-muted-foreground sm:border-b-0 border-muted-foreground/30 hover:text-background dark:hover:text-foreground transition-colors duration-100"
                                     >
                                         {link.label}
                                     </Link>

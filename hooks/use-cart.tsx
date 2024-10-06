@@ -18,7 +18,7 @@ interface Product {
     favorite: boolean;
     category: string;
     url: ProductUrl;
-    quantity?: number;
+    quantity: number;
 }
 
 interface ProductUrl {

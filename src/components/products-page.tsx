@@ -13,6 +13,7 @@ interface Product {
     favorite: boolean;
     category: string;
     url: ProductUrl;
+    quantity?: number;
 }
 
 interface ProductUrl {

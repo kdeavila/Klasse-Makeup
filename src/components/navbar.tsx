@@ -12,7 +12,7 @@ export function Navbar() {
 
     return (
         <header
-            className="sticky top-0 left-0 right-0 bottom-0 h-16 z-50 w-full bg-background/90 backdrop-blur-md border-b-[1px]">
+            className="sticky top-0 left-0 right-0 bottom-0 h-16 z-50 w-full bg-muted/90 backdrop-blur-md border-b-[1px]">
             <nav className="flex items-center justify-between w-full h-full px-8 max-w-7xl mx-auto 2xl:px-0">
                 <Link href="/">
                     <svg
@@ -46,7 +46,8 @@ export function Navbar() {
                                 <BaggageClaim strokeWidth={1}/>
                                 <span>{cart.items.length}</span>
                             </Link>
-                        )}
+                        )
+                    }
                     <ModeToggle/>
                 </div>
             </nav>
