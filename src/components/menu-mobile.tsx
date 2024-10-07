@@ -10,16 +10,12 @@ import {
 
 import LinkMenuMobile from "./link-menu-mobile";
 import {Button} from "./ui/button";
-import {BaggageClaim, Heart, MenuIcon, ShoppingCart} from "lucide-react";
+import {MenuIcon} from "lucide-react";
 import {useState} from "react";
-import {ModeToggle} from "./toggle-theme";
-import {Separator} from "./ui/separator";
-import {useCart} from "../../hooks/use-cart";
 
 export function MenuMobile() {
     const [isOpen, setIsOpen] = useState(false);
     const handleClose = () => setIsOpen(false);
-    const cart = useCart();
 
     return (
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -95,28 +91,6 @@ export function MenuMobile() {
                             />
                         </li>
                     </ul>
-                </div>
-
-                <Separator className="my-4"/>
-
-                <div className="w-2/4 mx-auto flex justify-between items-center">
-                    <a href="/favorites">
-                        <Heart color="#ec4899" strokeWidth={2}/>
-                    </a>
-
-                    {cart.items.length === 0 ? (
-                            <a href="/cart">
-                                <ShoppingCart strokeWidth={2}/>
-                            </a>
-                        ) :
-                        (
-                            <a href="/cart" className="flex gap-1">
-                                <BaggageClaim strokeWidth={1}/>
-                                <span>{cart.items.length}</span>
-                            </a>
-                        )
-                    }
-                    <ModeToggle/>
                 </div>
             </SheetContent>
         </Sheet>

@@ -7,10 +7,11 @@ import arrayProducts from "@/data/products";
 import {formatCurrency} from "@/utils/format-currency";
 import {hashId} from "@/utils/hash";
 import {ScrollArea} from "@/components/ui/scroll-area";
-import {Minus, Plus, ShoppingCart} from "lucide-react";
+import {Heart, Minus, Plus, ShoppingCart} from "lucide-react";
 import {useState} from "react";
 import Image from "next/image";
 import {useCart} from "../../../../../hooks/use-cart";
+import {useLovedProducts} from "../../../../../hooks/use-loved-products";
 
 interface ProductPageProps {
     params: { id: string };
@@ -19,6 +20,7 @@ interface ProductPageProps {
 export default function ProductPage({params}: ProductPageProps) {
     const {id} = params;
     const {addItems} = useCart()
+    const {addLoveItem} = useLovedProducts()
     const product = arrayProducts.find((product) => hashId(product.id) === id);
 
     const [currentImage, setCurrentImage] = useState(0);
@@ -35,7 +37,6 @@ export default function ProductPage({params}: ProductPageProps) {
     const decrementQuantity = () => {
         setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
     };
-
 
     return (
         <main className="text-left px-8">
@@ -109,9 +110,16 @@ export default function ProductPage({params}: ProductPageProps) {
                                     <Plus className="h-4 w-4"/>
                                 </Button>
                             </div>
-                            <Button className="w-full" onClick={() => addItems(product, quantity)}>
-                                <ShoppingCart className="mr-2 h-4 w-4"/> Agregar al carrito
-                            </Button>
+
+                            <div className="flex items-center">
+                                <Button className="w-full" onClick={() => addItems(product, quantity)}>
+                                    <ShoppingCart className="mr-2 h-4 w-4"/> Agregar al carrito
+                                </Button>
+
+                                <Button variant="ghost" onClick={() => addLoveItem(product)}>
+                                    <Heart strokeWidth={2} color="#ec4899"/>
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </CardContent>
