@@ -1,4 +1,5 @@
 import { CarouselProducts } from "@/components/carousel";
+import CustomerReviews from "@/components/customer-reviews";
 import GallerySection from "@/components/gallery-section";
 import Hero from "@/components/hero";
 import { MessageSlider } from "@/components/message-slider";
@@ -42,6 +43,9 @@ export default function Home() {
         <CarouselProducts />
       </Section>
 
+      <Section title="Opiniones de nuestros clientes" description="Algunas de las opiniones generales de nuestors clientes">
+        <CustomerReviews />
+      </Section>
     </main>
   );
 }

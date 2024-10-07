@@ -4,7 +4,8 @@ import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 export function VideoCategories() {
-  const categoryArray = [
+
+  const CATEGORIES = [
     {
       id: 1,
       name: "Ojos",
@@ -31,8 +32,8 @@ export function VideoCategories() {
     },
   ];
   return (
-    <div className="w-full grid items-center gap-8">
-      <div className="w-full max-w-5xl mx-auto aspect-video overflow-hidden">
+    <div className="w-full grid gap-8">
+      <div className="flex flex-col gap-8 lg:flex-row">
         <video
           src="/video-category/video-tiktok.mp4"
           autoPlay
@@ -40,16 +41,34 @@ export function VideoCategories() {
           controls
           muted
           className="w-full h-full object-cover"
-        ></video>
+        >
+        </video>
+
+        <aside className="basis-1/2">
+          <Card className="h-full p-4 text-left hover:border-[#ec4599] transition-colors duration-150">
+            <CardContent className="p-6">
+              <h2 className="text-xl font-semibold mb-4">Detalles del Look 💗</h2>
+              <ul className="space-y-2 mb-8">
+                <li className="text-sm text-muted-foreground">Base ligera para un acabado natural</li>
+                <li className="text-sm text-muted-foreground">Iluminador en puntos estratégicos</li>
+                <li className="text-sm text-muted-foreground">Cejas peinadas hacia arriba</li>
+                <li className="text-sm text-muted-foreground">Labios con brillo transparente</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold mb-2">Intrucciones: </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed text-pretty">Para lograr un acabado natural, comienza aplicando una base ligera con una esponja húmeda o con los dedos, asegurándote de difuminar bien. Luego, utiliza un iluminador en puntos estratégicos como el arco de las cejas, los pómulos y el puente de la nariz, difuminando suavemente con los dedos.</p>
+            </CardContent>
+          </Card>
+        </aside>
       </div>
 
       <div className="w-full grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-6">
-        {categoryArray.map((product) => {
+        {CATEGORIES.map((product) => {
           const { id, name, src, href } = product;
 
           return (
             <Link key={id} href={href}>
-              <Card className="w-full flex flex-col items-center gap-4 p-4 group bg-background hover:bg-muted transition-colors duration-300">
+              <Card className="w-full flex flex-col items-center gap-4 p-4 group bg-background hover:bg-muted hover:border-[#ec4599] transition-colors duration-200">
                 <CardHeader className="w-36 p-0">
                   <Image
                     className="w-full h-full aspect-square object-cover group-hover:scale-105 duration-300"

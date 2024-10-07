@@ -1,3 +1,4 @@
+import { PageNotFound } from "@/components/404";
 import Products from "@/components/products-page";
 import { Section } from "@/components/section";
 import arrayProducts from "@/data/products";
@@ -26,9 +27,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
                     </Section>
                 </main>
             ) : (
-                <main className="min-h-screen flex grow items-center pt-8">
-                    <Section title="Lo sentimos..." description="No tenemos productos de este tipo." />
-                </main>
+                <PageNotFound title="Categoría no encontrada" />
             )}
         </>
     );

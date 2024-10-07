@@ -1,33 +1,36 @@
 "use client";
 
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import arrayProducts from "@/data/products";
-import {formatCurrency} from "@/utils/format-currency";
-import {hashId} from "@/utils/hash";
-import {ScrollArea} from "@/components/ui/scroll-area";
-import {Heart, Minus, Plus, ShoppingCart} from "lucide-react";
-import {useState} from "react";
+import { formatCurrency } from "@/utils/format-currency";
+import { hashId } from "@/utils/hash";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Heart, Minus, Plus, ShoppingCart } from "lucide-react";
+import { useState } from "react";
 import Image from "next/image";
-import {useCart} from "../../../../../hooks/use-cart";
-import {useLovedProducts} from "../../../../../hooks/use-loved-products";
+import { useCart } from "../../../../../hooks/use-cart";
+import { useLovedProducts } from "../../../../../hooks/use-loved-products";
+import { PageNotFound } from "@/components/404";
 
 interface ProductPageProps {
     params: { id: string };
 }
 
-export default function ProductPage({params}: ProductPageProps) {
-    const {id} = params;
-    const {addItems} = useCart()
-    const {addLoveItem} = useLovedProducts()
+export default function ProductPage({ params }: ProductPageProps) {
+    const { id } = params;
+    const { addItems } = useCart()
+    const { addLoveItem } = useLovedProducts()
     const product = arrayProducts.find((product) => hashId(product.id) === id);
 
     const [currentImage, setCurrentImage] = useState(0);
     const [quantity, setQuantity] = useState(1);
 
     if (!product) {
-        return <div>Producto no encontrado</div>;
+        return (
+            <PageNotFound title="Producto no encontrado" />
+        );
     }
 
     const incrementQuantity = () => {
@@ -49,11 +52,10 @@ export default function ProductPage({params}: ProductPageProps) {
                                     {product.images.map((img, index) => (
                                         <div
                                             key={index}
-                                            className={`w-20 h-20 flex-shrink-0 cursor-pointer ${
-                                                currentImage === index
-                                                    ? "border-2 border-primary"
-                                                    : "border border-gray-200"
-                                            }`}
+                                            className={`w-20 h-20 flex-shrink-0 cursor-pointer ${currentImage === index
+                                                ? "border-2 border-primary"
+                                                : "border border-gray-200"
+                                                }`}
                                             onClick={() => setCurrentImage(index)}
                                         >
                                             <Image
@@ -99,7 +101,7 @@ export default function ProductPage({params}: ProductPageProps) {
                                     onClick={decrementQuantity}
                                     disabled={quantity === 1}
                                 >
-                                    <Minus className="h-4 w-4"/>
+                                    <Minus className="h-4 w-4" />
                                 </Button>
                                 <span className="text-xl font-semibold">{quantity}</span>
                                 <Button
@@ -107,17 +109,17 @@ export default function ProductPage({params}: ProductPageProps) {
                                     size="icon"
                                     onClick={incrementQuantity}
                                 >
-                                    <Plus className="h-4 w-4"/>
+                                    <Plus className="h-4 w-4" />
                                 </Button>
                             </div>
 
                             <div className="flex items-center">
                                 <Button className="w-full" onClick={() => addItems(product, quantity)}>
-                                    <ShoppingCart className="mr-2 h-4 w-4"/> Agregar al carrito
+                                    <ShoppingCart className="mr-2 h-4 w-4" /> Agregar al carrito
                                 </Button>
 
                                 <Button variant="ghost" onClick={() => addLoveItem(product)}>
-                                    <Heart strokeWidth={2} color="#ec4899"/>
+                                    <Heart strokeWidth={2} color="#ec4899" />
                                 </Button>
                             </div>
                         </div>
