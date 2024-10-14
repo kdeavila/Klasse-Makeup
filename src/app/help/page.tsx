@@ -1,8 +1,6 @@
-"use client";
-
 import { FAQ } from "@/components/faq";
-import MapComponent from "@/components/map";
 import { Section } from "@/components/section";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Help() {
   return (
@@ -19,7 +17,7 @@ export default function Help() {
         title="Ubicación"
         description="Puedes acercarte a nuestra tienda"
       >
-        <MapComponent />
+        <Skeleton className="w-full max-w-4xl h-96" />
       </Section>
     </main>
   );

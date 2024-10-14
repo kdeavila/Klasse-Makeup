@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card";
 import { formatCurrency } from "@/utils/format-currency";
 import { hashId } from "@/utils/hash";
-import { ChevronRight, Eye, ShoppingCart } from "lucide-react";
+import { ChevronRight, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
