@@ -19,8 +19,8 @@ export function Section({ children, title, description, className, id }: Section
       )}
     >
       <div className="w-full text-left mb-section-bottom md:text-center">
-        <h1 className="text-2xl font-semibold uppercase mb-1">{title}</h1>
-        <p className="text-sm text-primary/85 tracking-wider">
+        <h1 className="text-3xl font-bold uppercase mb-1">{title}</h1>
+        <p className="text-primary/85 tracking-wider">
           {description}
         </p>
       </div>

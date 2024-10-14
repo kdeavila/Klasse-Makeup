@@ -6,7 +6,7 @@ import arrayProducts from "@/data/products";
 export default function ProductsPage() {
   return (
     <Section
-      className="pt-8"
+      className="mt-section-bottom"
       title="Nuestra colección de productos"
       description="La mejor variedad de productos para tu makeup:"
     >

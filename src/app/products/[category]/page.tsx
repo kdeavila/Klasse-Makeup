@@ -21,7 +21,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
     return (
         <>
             {categoryName ? (
-                <main className="pt-8">
+                <main className="mt-section-bottom">
                     <Section title={`Lo mejor en ${categoryName.toLowerCase()}`} description="Productos únicos e inigualables solo para ti" >
                         <Products arrayProducts={productsFilteredByCategory} />
                     </Section>

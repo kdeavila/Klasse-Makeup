@@ -13,8 +13,8 @@ export function ImagesAboutUs(props: ImagesAboutUsProps) {
       className="w-full h-auto aspect-square object-cover pointer-events-none"
       src={src}
       alt={`Image-about-us-${id}`}
-      width={700}
-      height={700}
+      width={650}
+      height={650}
     />
   );
 }

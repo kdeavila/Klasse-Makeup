@@ -9,7 +9,6 @@ import { hashId } from "@/utils/hash";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Heart, Minus, Plus, ShoppingCart } from "lucide-react";
 import { useState } from "react";
-import Image from "next/image";
 import { useCart } from "../../../../../hooks/use-cart";
 import { useLovedProducts } from "../../../../../hooks/use-loved-products";
 import { PageNotFound } from "@/components/404";
@@ -58,25 +57,12 @@ export default function ProductPage({ params }: ProductPageProps) {
                                                 }`}
                                             onClick={() => setCurrentImage(index)}
                                         >
-                                            <Image
-                                                src={img}
-                                                alt={`Thumbnail ${index + 1}`}
-                                                className="w-full h-full object-cover"
-                                                width={100}
-                                                height={100}
-                                            />
+                                            <img src={img} alt={`Thumbnail ${index + 1}`} className="w-full h-full object-cover" />
                                         </div>
                                     ))}
                                 </div>
                                 <div className="order-1 md:order-2 flex-grow">
-                                    <Image
-                                        src={product.images[currentImage]}
-                                        alt={`Product image ${currentImage + 1}`}
-                                        width={500}
-                                        height={500}
-                                        priority
-                                        className="w-full h-[460px] object-cover"
-                                    />
+                                    <img src={product.images[currentImage]} alt={`Product image ${currentImage + 1}`} />
                                 </div>
                             </div>
                         </div>
@@ -85,13 +71,13 @@ export default function ProductPage({ params }: ProductPageProps) {
                             <Badge variant="default" className="mb-6">
                                 {product.category}
                             </Badge>
-                            <h2 className="text-2xl font-bold mb-4">{product.name}</h2>
+                            <h2 className="text-3xl uppercase font-bold mb-4">{product.name}</h2>
 
-                            <ScrollArea className="w-full h-[170px] text-muted-foreground mb-6">
+                            <ScrollArea className="w-full h-[170px] text-muted-foreground text-pretty mb-6">
                                 {product.description}
                             </ScrollArea>
 
-                            <div className="text-3xl font-bold text-primary/85 mb-6">
+                            <div className="text-3xl font-bold mb-6">
                                 {formatCurrency(product.price)}
                             </div>
                             <div className="flex items-center space-x-4 mb-6">

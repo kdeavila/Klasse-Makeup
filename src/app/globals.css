@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: "Arimo", sans-serif;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -40,6 +36,7 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 240 8% 12%;
     --foreground: 210 17% 96%;
@@ -51,7 +48,7 @@ body {
     --primary-foreground: 0 0% 9%;
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 210 17% 96%;
-    --muted:240 7% 11%;
+    --muted: 240 7% 11%;
     --muted-foreground: 0 0% 63.9%;
     --accent: 0 0% 14.9%;
     --accent-foreground: 210 17% 96%;
@@ -72,6 +69,7 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }

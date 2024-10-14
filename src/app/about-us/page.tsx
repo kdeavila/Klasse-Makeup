@@ -1,7 +1,7 @@
-import {BrandValues} from "./components/brand-values";
-import {HeartHandshakeIcon, Settings, ShoppingBag, Users} from "lucide-react";
-import {ImagesAboutUs} from "./components/image-about";
-import {Section} from "@/components/section";
+import { BrandValues } from "./components/brand-values";
+import { HeartHandshakeIcon, Settings, ShoppingBag, Users } from "lucide-react";
+import { ImagesAboutUs } from "./components/image-about";
+import { Section } from "@/components/section";
 import Link from "next/link";
 
 export default function AboutUs() {
@@ -30,28 +30,28 @@ export default function AboutUs() {
         {
             title: "Innovación Constante",
             description: "Estamos a la vanguardia, ofreciendo productos frescos y emocionantes que marcan tendencias.",
-            icon: <Settings strokeWidth={2} size={sizeIcon}/>
+            icon: <Settings strokeWidth={2} size={sizeIcon} />
         },
         {
             title: "Inclusividad y Diversidad",
             description: "Celebramos la belleza en todas sus formas y ofrecemos productos para todos los tonos y estilos.",
-            icon: <Users strokeWidth={2} size={sizeIcon}/>
+            icon: <Users strokeWidth={2} size={sizeIcon} />
         },
         {
             title: "Pasión por el Servicio",
             description: "Estamos dedicados a ofrecer un servicio excepcional y a superar tus expectativas.",
-            icon: <HeartHandshakeIcon strokeWidth={2} size={sizeIcon}/>
+            icon: <HeartHandshakeIcon strokeWidth={2} size={sizeIcon} />
         },
         {
             title: "Sustentabilidad",
             description: "Nos comprometemos a brindar productos de alta calidad y una experiencia de compra que se adapte a tus necesidades.",
-            icon: <ShoppingBag strokeWidth={2} size={sizeIcon}/>
+            icon: <ShoppingBag strokeWidth={2} size={sizeIcon} />
         }];
 
     return (
         <main className="text-center">
             <Section>
-                <Link className="w-72 mb-12" href="/">
+                <Link className="w-72 mb-section-bottom" href="/">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 976 200"

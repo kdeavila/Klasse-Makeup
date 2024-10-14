@@ -32,7 +32,7 @@ export const useLovedProducts = create(persist<UseLovedProductsType>((set, get) 
 
         if (existingItem) {
             return toast({
-                title: "El producto ya existe en la lista 💔",
+                title: "El producto ya existe en favoritos 💔",
                 variant: "destructive"
             })
         }
@@ -41,13 +41,13 @@ export const useLovedProducts = create(persist<UseLovedProductsType>((set, get) 
             lovedItems: [...get().lovedItems, data]
         })
         toast({
-            title: " Producto añadido a la lista 🧡"
+            title: " Producto añadido a favoritos 🧡"
         })
     },
     removeLovedItem: (id: number) => {
         set({lovedItems: [...get().lovedItems.filter((item) => item.id !== id)]})
         toast({
-            title: "Producto eliminado de la lista ❤️‍🔥"
+            title: "Producto eliminado de favoritos 🗑"
         })
     }
 }), {

@@ -33,7 +33,7 @@ export const useCart = create(persist<CartStore>((set, get) => ({
 
         if (existingItems) {
             return toast({
-                title: "El producto ya se encuentra en el carrito",
+                title: "El producto ya se encuentra en el carrito 💔",
                 variant: "destructive",
             });
         }

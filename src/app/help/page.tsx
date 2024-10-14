@@ -1,8 +1,8 @@
 "use client";
 
 import { FAQ } from "@/components/faq";
+import MapComponent from "@/components/map";
 import { Section } from "@/components/section";
-import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Help() {
   return (
@@ -10,7 +10,7 @@ export default function Help() {
       <Section
         title="Preguntas frecuentes"
         description="Nuestros clientes preguntan"
-        className="max-w-4xl pt-8"
+        className="max-w-4xl mt-section-bottom"
       >
         <FAQ />
       </Section>
@@ -19,7 +19,7 @@ export default function Help() {
         title="Ubicación"
         description="Puedes acercarte a nuestra tienda"
       >
-        <Skeleton className="w-full h-96" />
+        <MapComponent />
       </Section>
     </main>
   );

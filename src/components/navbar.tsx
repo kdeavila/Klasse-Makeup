@@ -28,7 +28,7 @@ export function Navbar() {
                         {lovedItems.length === 0 ? (
                             <Heart color="#ec4899" strokeWidth={2}/>
                         ) : (
-                            <Heart color="#ec4899" fill="#ec4899" strokeWidth={2}/>
+                            <Heart color="#ec4899" stroke="#8F265A" fill="#ec4899" strokeWidth={2}/>
                         )}
                     </Link>
                     {cart.items.length === 0 ? (

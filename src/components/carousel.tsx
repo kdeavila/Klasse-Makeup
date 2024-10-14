@@ -38,17 +38,17 @@ export function CarouselProducts() {
             {favoriteProducts.map((product) => (
               <CarouselItem
                 key={product.id}
-                className="xs:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+                className="xs:basis-1/2 md:basis-1/3 lg:basis-1/4"
               >
                 <Link
                   href={`/products/product/${hashId(product.id)}`}
                   className="group"
                 >
-                  <Card className="w-full h-72 relative bg-transparent">
+                  <Card className="w-full h-96 relative bg-transparent">
                     <Image
                       className="block w-full h-full aspect-square object-cover"
-                      width={350}
-                      height={350}
+                      width={800}
+                      height={800}
                       src={product.images[0]}
                       alt={product.name}
                     />
