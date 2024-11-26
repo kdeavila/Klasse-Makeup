@@ -34,17 +34,19 @@ export function VideoCategories() {
   return (
     <div className="w-full grid gap-8">
       <div className="flex flex-col gap-8 lg:flex-row">
-        <video
-          src="/video-category/video-tiktok.mp4"
-          autoPlay
-          loop
-          controls
-          muted
-          className="w-full h-full object-cover"
-        >
-        </video>
+        <div className="w-full">
+          <video
+            src="/video-category/video-tiktok.mp4"
+            autoPlay
+            loop
+            controls
+            muted
+            className="w-full h-full object-cover"
+          >
+          </video>
+        </div>
 
-        <aside className="basis-1/2">
+        <aside className="basis-1/3 shrink-0">
           <Card className="h-full p-4 text-left hover:border-[#ec4599] transition-colors duration-150">
             <CardContent className="p-6">
               <h2 className="text-xl font-semibold mb-4">Detalles del Look 💗</h2>

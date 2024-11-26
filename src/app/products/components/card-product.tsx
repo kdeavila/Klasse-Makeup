@@ -64,12 +64,12 @@ export const CardProduct = (props: CardProductProps) => {
                 />
             </div>
 
-            <CardContent className="p-4 pb-2 text-left grow space-y-1">
-                <CardTitle className="text-xl font-bold uppercase line-clamp-1">
+            <CardContent className="p-4 pb-2 text-left grow">
+                <CardTitle className="text-lg font-bold uppercase line-clamp-1">
                     {name}
                 </CardTitle>
 
-                <h3 className="text-lg text-foreground/80">{formatCurrency(price)}</h3>
+                <h3 className="text-xl text-foreground/90 mb-1">{formatCurrency(price)}</h3>
 
                 <CardDescription className="text-muted-foreground line-clamp-3">
                     {description}

@@ -15,7 +15,7 @@ export default function CustomerReviews() {
             id: 1,
             name: "Juan Pérez",
             position: "Maquillador Profesional",
-            avatar: "/avatar/avatar1.webp",
+            avatar: "/avatar/avatar4.webp",
             message: "El proceso de compra fue muy sencillo y rápido. Desde que entré al sitio, la navegación fue fluida y encontré todo lo que necesitaba sin complicaciones. Los productos llegaron a tiempo y en perfectas condiciones. ¡Definitivamente compraré de nuevo! Estoy muy satisfecho con la calidad y el servicio que ofrecen.",
             rating: 5,
         },
@@ -39,14 +39,14 @@ export default function CustomerReviews() {
             id: 4,
             name: "Laura Martínez",
             position: "Influencer de Maquillaje",
-            avatar: "/avatar/avatar4.webp",
+            avatar: "/avatar/avatar1.webp",
             message: "Si bien el maquillaje es excelente y de alta calidad, tuve problemas con el seguimiento del envío. No recibí actualizaciones frecuentes y eso me generó cierta ansiedad. La atención al cliente fue buena, aunque tardaron en responder a mis consultas. Sería genial si mejoraran este aspecto, ya que me gustaría que el servicio fuera tan impecable como los productos que ofrecen.",
             rating: 3,
         },
     ];
 
     return (
-        <div className="w-full grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="w-full grid grid-cols-1 gap-6 sm:grid-cols-2">
             {REVIEWS.map(review => (<CardReview key={review.id} {...review} />))}
         </div>
     );

@@ -68,18 +68,19 @@ export default function ProductPage({ params }: ProductPageProps) {
                         </div>
 
                         <div className="p-4">
-                            <Badge variant="default" className="mb-6">
+                            <Badge variant="default" className="mb-4">
                                 {product.category}
                             </Badge>
                             <h2 className="text-3xl uppercase font-bold mb-4">{product.name}</h2>
 
-                            <ScrollArea className="w-full h-[170px] text-muted-foreground text-pretty mb-6">
+                            <ScrollArea className="w-full h-[120px] text-muted-foreground text-pretty mb-6">
                                 {product.description}
                             </ScrollArea>
 
                             <div className="text-3xl font-bold mb-6">
                                 {formatCurrency(product.price)}
                             </div>
+                            
                             <div className="flex items-center space-x-4 mb-6">
                                 <Button
                                     variant="outline"
